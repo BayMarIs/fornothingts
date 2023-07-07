@@ -1,0 +1,113 @@
+.SideElements {
+  width: 100%;
+}
+.SideElements__left {
+  position: fixed;
+
+  font-size: 1rem;
+  left: -10%;
+
+  top: 50%;
+  transform: rotate(270deg);
+  animation: slideText 4s infinite;
+}
+.SideElements__right {
+  right: -5%;
+  width: 150px;
+  position: fixed;
+  transform: rotate(270deg);
+  top: 50%;
+  right: -60px;
+  display: flex;
+  color: #040507;
+  background-color: white;
+  padding-bottom: 20px;
+  align-items: center;
+  font-size: 0.8rem;
+
+  z-index: 4;
+}
+.SideElements__right__title {
+  transform: rotate(90deg);
+  margin-left: 2%;
+  font-size: 1rem;
+
+  padding-top: 20px;
+  padding-left: 4%;
+}
+.SideElements__right__p {
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 100%;
+  font-weight: 600;
+}
+.SideElements__vibe {
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  bottom: 5px;
+  position: fixed;
+  left: 3px;
+}
+.SideElements__vibe:hover::after {
+  content: "PICK YOUR VIBE";
+  position: absolute;
+  top: 100%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  left: 50%;
+  width: max-content;
+  transform: translateX(+50%);
+  transform: translateY(-300%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 999;
+  font-size: 12px;
+}
+.SideElements__vibe::before {
+  content: "";
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: white;
+  display: block;
+
+  margin-left: 40%;
+  margin-top: 40%;
+}
+
+/* .circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.SideElements__p {
+  position: fixed;
+  font-size: 0.9rem;
+  bottom: 5px;
+  right: 3px;
+}
+@media all and (max-width: 1024px) {
+  .SideElements__left {
+    display: none;
+  }
+  .SideElements__p {
+    display: none;
+  }
+  .SideElements__vibe {
+    display: none;
+  }
+}
+@media all and (max-width: 430px) {
+  .SideElements__right {
+    display: none;
+  }
+}

@@ -1,0 +1,243 @@
+.WorkPage {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 3%;
+}
+.WorkPage__title {
+  font-size: 12rem;
+  font-weight: 400;
+
+  margin-bottom: 40px;
+  text-align: center;
+}
+.WorkPage__MainContainWorks {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 5%;
+}
+.WorkPage__MainContainWorks__block {
+  width: 29%;
+}
+.WorkPage__MainContainWorks__block__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.6s ease;
+  z-index: 2;
+}
+
+.WorkPage__MainContainWorks__block__item:hover::before {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Затемненный цвет фона при наведении */
+}
+.WorkPage__MainContainWorks__block__item {
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.WorkPage__MainContainWorks__block__item__view {
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  position: absolute;
+  color: #f50;
+  top: 40%;
+  display: flex;
+  left: 30%;
+  text-align: center;
+  font-size: 160%;
+  transition: opacity 1.5s, visibility 1.5s;
+  z-index: 3;
+}
+
+.WorkPage__MainContainWorks__block__item:hover
+  .WorkPage__MainContainWorks__block__item__view {
+  opacity: 1;
+  visibility: visible;
+}
+.WorkPage__MainContainWorks__block__item__img {
+  width: 100%;
+  max-height: 800px;
+}
+.WorkPage__MainContainWorks__block__item__div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.WorkPage__MainContainWorks__block__item__div__span {
+  text-decoration: underline;
+  color: gray;
+}
+.WorkPage__MainContainWorks__block__item__title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  z-index: 3;
+}
+.WorkPage__MainContainWorks__block__item__p {
+  font-size: 1rem;
+  line-height: 1;
+  z-index: 3;
+}
+
+.WorkPage__MainContainWorks__block__item__editNo {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 2px solid #405407;
+}
+.HomePage__linkWork__p {
+  text-align: center;
+}
+.WorkPage__add {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 2%;
+  border: 3px solid var(--my-color, rgb(146, 137, 137));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.WorkPage__add__Form {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.WorkPage__add__title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.WorkPage__add__inp {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 3px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 60%;
+  font-size: 1.4rem;
+  outline: none;
+
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 60px;
+}
+.WorkPage__add__Form__p {
+  color: #f50;
+  font-size: 0.9rem;
+}
+.WorkPage__add__buttonGroup {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+.WorkPage__add__buttonGroup__button {
+  width: 20%;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.Input__croup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.WorkPage__MainContainWorks__block__item__inp {
+  margin-top: 20px;
+  background-color: transparent;
+  border-top: transparent;
+  border-bottom: 2px solid #bfbfbf;
+  border-left: transparent;
+  border-right: transparent;
+  color: #bfbfbf;
+  padding-bottom: 10px;
+
+  font-size: 1rem;
+  outline: none;
+}
+.WorkPage__MainContainWorks__block__item:hover .animat {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent, #f50, transparent);
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  animation: animate 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+@media all and (max-width: 768px) {
+  .WorkPage__MainContainWorks__block__item__div__span {
+    font-size: 0.5rem;
+  }
+  .WorkPage__title {
+    font-size: 8rem;
+  }
+
+  .WorkPage__MainContainWorks__block__item__title {
+    font-size: 1.2rem;
+  }
+  .WorkPage__MainContainWorks__block__item__p {
+    font-size: 0.6rem;
+  }
+  .WorkPage__add__title {
+    font-size: 2rem;
+  }
+  .WorkPage__add__inp {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .WorkPage__add__buttonGroup__button {
+    width: 40%;
+  }
+}
+@media all and (max-width: 430px) {
+  .WorkPage__add__title {
+    font-size: 1.4rem;
+  }
+  .WorkPage__add__inp {
+    width: 90%;
+  }
+  .WorkPage__title {
+    font-size: 4rem;
+  }
+  .WorkPage__MainContainWorks__block__item__title {
+    font-size: 0.9rem;
+  }
+  .WorkPage__MainContainWorks__block__item__p {
+    font-size: 0.4rem;
+  }
+}

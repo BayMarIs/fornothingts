@@ -1,0 +1,248 @@
+.Form {
+  padding-left: 3%;
+}
+.HomePage__Form {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+.HomePage__Form__title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.HomePage__Form__title__span {
+  line-height: 1;
+  display: flex;
+
+  font-size: 11rem;
+  font-weight: 480;
+  align-items: center;
+}
+
+#HomePage__Form__title__span__line_f {
+  height: 2px;
+  width: 45%;
+  background-color: #bfbfbf;
+}
+#HomePage__Form__title__span__line_s {
+  height: 2px;
+  width: 10%;
+  background-color: #bfbfbf;
+}
+#HomePage__Form__title__span__line_t {
+  height: 2px;
+  width: 75%;
+  background-color: #bfbfbf;
+}
+.HomePage__Form__form {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 5%;
+}
+.HomePage__Form__form__el {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: left;
+}
+.HomePage__Form__form__el__name {
+  font-size: 1.7rem;
+  width: 32%;
+  text-align: left;
+  margin-left: 8%;
+}
+.HomePage__Form__form__el__infoOrder {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 60%;
+  font-size: 1.4rem;
+  outline: none;
+  margin-left: 5%;
+  text-align: left;
+
+  padding-bottom: 20px;
+}
+
+.HomePage__Form__form__el__error {
+  position: absolute;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #f50;
+  left: 43%;
+  top: 100%;
+}
+.HomePage__Form__form__el__infoOrder__option {
+  font-size: 1.7rem;
+  background-color: #bfbfbf;
+
+  color: black;
+  border-top: 1px solid #040507;
+  border-right: 1px solid #040507;
+  border-left: 1px solid #040507;
+}
+#HomePage__Form__form__el__infoOrder {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 100%;
+  font-size: 1.4rem;
+  outline: none;
+  margin-left: 8%;
+  text-align: left;
+
+  padding-bottom: 20px;
+}
+#HomePage__Form__form__el {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: left;
+}
+#HomePage__Form__form__el__name {
+  font-size: 1.7rem;
+  width: 10%;
+  text-align: left;
+  margin-left: 4%;
+}
+#HomePage__Form__form__el__error {
+  position: absolute;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #f50;
+  left: 22%;
+  top: 100%;
+}
+/* finish form */
+.HomePage__Final {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HomePage__Final__title {
+  width: 20%;
+  font-size: 1.6rem;
+  color: #bfbfbf;
+  font-weight: 400;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+  border: 2px solid #f50;
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.HomePage__Final__title__svg {
+  position: absolute;
+  left: 42%;
+  top: 20px;
+  z-index: 1;
+}
+#HomePage__Final__title__svg {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  left: 40%;
+}
+.HomePage__Final__p {
+  text-align: center;
+  color: #f50;
+  font-size: 0.9rem;
+  width: 40%;
+}
+
+@media all and (max-width: 1024px) {
+  .HomePage__Final__title {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  .HomePage__Form__title__span {
+    font-size: 8rem;
+  }
+  .HomePage__Form__form {
+    flex-wrap: wrap;
+  }
+  .HomePage__Form__form__el {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: left;
+  }
+  .HomePage__Form__form__el__name {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .HomePage__Form__form__el__infoOrder {
+    margin-left: 0;
+    width: 100%;
+  }
+  .HomePage__Form__form__el__error {
+    left: 0;
+  }
+  #HomePage__Form__form__el {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: left;
+  }
+  #HomePage__Form__form__el__infoOrder {
+    margin-left: 0;
+    width: 100%;
+  }
+  #HomePage__Form__form__el__name {
+    margin-left: 0;
+  }
+  #HomePage__Form__form__el__error {
+    left: 0;
+  }
+}
+@media all and (max-width: 1079px) {
+  .d {
+    display: none;
+  }
+  #HomePage__Final__title__svg {
+    display: none;
+  }
+}
+@media all and (max-width: 940px) {
+  .HomePage__Form__title__span {
+    font-size: 6rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .HomePage__Form__title__span {
+    font-size: 5rem;
+  }
+  .HomePage__Final__title {
+    font-size: 1rem;
+    width: 30%;
+  }
+}
+@media all and (max-width: 500px) {
+  .HomePage__Form__title__span {
+    font-size: 3rem;
+  }
+  .HomePage__Final__title {
+    font-size: 0.8rem;
+  }
+  .HomePage__Final__p {
+    font-size: 0.8rem;
+    width: 80%;
+  }
+}

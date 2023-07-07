@@ -1,0 +1,193 @@
+.WorkReadPage {
+  width: 85%;
+  margin-left: 10%;
+  margin-right: 5%;
+  padding-top: 100px;
+}
+.WorkReadPage__item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.WorkReadPage__itemChange {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.WorkReadPage__img {
+  width: 40%;
+  max-height: 900px;
+}
+.WorkReadPage__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.WorkReadPage__rightChange {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.WorkReadPage__right__title {
+  font-size: 8em;
+  font-weight: 400;
+  line-height: 1;
+}
+.WorkReadPage__right__p {
+  margin-top: 30px;
+  font-size: 2rem;
+  width: 100%;
+}
+.WorkReadPage__right__span {
+  width: 80%;
+  margin-top: 30px;
+  text-decoration: underline;
+  color: gray;
+  font-size: 1rem;
+}
+.WorkReadPage__item__edit {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 2px solid #405407;
+}
+.WorkReadPage__items {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.WorkReadPage__item__el {
+  width: 30px;
+  height: 30px;
+}
+.WorkReadPage__right__titleInp {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 3px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 100%;
+  font-size: 2rem;
+  outline: none;
+
+  text-align: left;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.WorkReadPage__right__descrInp {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 3px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+
+  text-align: left;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.WorkReadPage__right__advInp {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 3px solid #bfbfbf;
+  background-color: transparent;
+  color: var(--my-color, rgb(146, 137, 137));
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+
+  text-align: left;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+@media all and (max-width: 1024px) {
+  .WorkReadPage__right__title {
+    font-size: 3.5rem;
+  }
+  .WorkReadPage__right__p {
+    font-size: 1.4rem;
+  }
+  .WorkReadPage__right__titleInp {
+    font-size: 1.3rem;
+  }
+  .WorkReadPage__right__descrInp {
+    font-size: 1.3rem;
+  }
+  .WorkReadPage__right__advInp {
+    font-size: 1.3rem;
+  }
+  .WorkReadPage__right__advInp {
+    font-size: 1.3rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .WorkReadPage__itemChange {
+    flex-direction: column;
+    align-items: center;
+  }
+  .WorkReadPage__rightChange {
+    width: 100%;
+  }
+}
+@media all and (max-width: 600px) {
+  .WorkReadPage__right__p {
+    font-size: 0.8rem;
+  }
+  .WorkReadPage__right__title {
+    font-size: 2.5rem;
+  }
+  .WorkReadPage__right__titleInp {
+    font-size: 1rem;
+  }
+  .WorkReadPage__right__descrInp {
+    font-size: 1rem;
+  }
+  .WorkReadPage__right__advInp {
+    font-size: 1rem;
+  }
+  .WorkReadPage__right__advInp {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .WorkReadPage__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .WorkReadPage__img {
+    width: 80%;
+  }
+  .WorkReadPage__right__p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .WorkReadPage__right__title {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .WorkReadPage__right__span {
+    width: 100%;
+    text-align: center;
+  }
+  .WorkReadPage__right {
+    width: 100%;
+  }
+}

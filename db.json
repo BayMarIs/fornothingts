@@ -1,0 +1,102 @@
+{
+  "works": [
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/01/rent-dot-com-work-thumbnail-734x939.jpg",
+      "description": "WE TAKE THE HASSLE OUT OF RENTING. PERIOD.",
+      "title": "RENT.com",
+      "advantages": "Design. Development. Strategy.",
+      "id": 1
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/nissin-foods-thumbnail-542x692.jpg",
+      "description": "The original instant ramen. ",
+      "title": "NISSIN FOODS",
+      "advantages": "Design. Development. eCommerce. Strategy.",
+      "id": 2
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/brookfield-properties-manhattan-west-thumbnail-734x483.jpg",
+      "description": "Manhattan west is one of Brookfield’s most iconic placemaking destinations.",
+      "title": "BROOK FIELD PROPERTIES",
+      "advantages": "Design. Development. Strategy.",
+      "id": 3
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/purdue-university-hovde-hall-thumbnail-734x483.jpg",
+      "description": "A bipartisan initiative at the intersection of technology and U.S. foreign policy. ",
+      "title": "PURDUE UNIVERSYTI",
+      "advantages": "Design. Development. Strategy.",
+      "id": 4
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/steamvection-steamhead-gold-thermasol-thumbnail-734x483.jpg",
+      "description": "Manhattan west is one of Brookfield’s most iconic placemaking destinations.",
+      "title": "BROOK FIELD PROPERTIES",
+      "advantages": "Design. Development. Strategy.",
+      "id": 5
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/flock-freight-highway-thumbnail-734x939.jpg",
+      "description": "The freight shipping experts for any load. ",
+      "title": "flock freight",
+      "advantages": "Design. Development. Strategy.",
+      "id": 6
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/hammer-creative-logo-thumbnail-734x939.png",
+      "description": "WE TAKE THE HASSLE OUT OF RENTING. PERIOD.",
+      "title": "RENT.COM",
+      "advantages": "Design. Development. Strategy.",
+      "id": 7
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/global-mentor-network-logo-thumbnail-734x939.jpg",
+      "description": "The original instant ramen. ",
+      "title": "NISSIN FOODS",
+      "advantages": "Design. Development. eCommerce. Strategy.",
+      "id": 8
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/atlantic-council-capitolium-washington-dc-usa-thumbnail-734x939.jpg",
+      "description": "Strategies for safeguarding freedom through trusted technology.",
+      "title": "atlantic council",
+      "advantages": "Design. Development. Strategy.",
+      "id": 9
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/globber-scooter-madrid-thumbnail-734x483.png",
+      "description": "A bipartisan initiative at the intersection of technology and U.S. foreign policy. ",
+      "title": "PURDUE UNIVERSYTI",
+      "advantages": "Design. Development. Strategy.",
+      "id": 10
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/soccer-wire-soccer-goal-thumbnail-542x694.jpg",
+      "description": "Strategies for safeguarding freedom through trusted technology.",
+      "title": "atlantic council",
+      "advantages": "Design. Development. Strategy.",
+      "id": 11
+    },
+    {
+      "imgUrl": "https://wantedfornothing.com/wp-content/uploads/2023/04/golden-state-art-thumbnail-734x939.jpg",
+      "description": "The freight shipping experts for any load. ",
+      "title": "flock freight",
+      "advantages": "Design. Development. Strategy.",
+      "id": 12
+    },
+    {
+      "imgUrl": "https://avatars.mds.yandex.net/i?id=faac385cf93e826d0b72c6745ab9942efdbe9071-8216803-images-thumbs&n=13",
+      "description": "i'm a very good dragon ^=^ ",
+      "title": "dragon",
+      "advantages": "Strategy. Design.",
+      "id": 13
+    },
+    {
+      "imgUrl": "https://avatars.mds.yandex.net/i?id=90ee9dc9e48795f6621f78d4eaabbee5065fecd7-8318446-images-thumbs&n=13",
+      "description": "Play and game with strategy gameplay Iskak",
+      "title": "Warcraft",
+      "advantages": "Strategy. Story. Charathers",
+      "id": 14
+    }
+  ]
+}
