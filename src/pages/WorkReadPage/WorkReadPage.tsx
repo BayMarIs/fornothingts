@@ -30,7 +30,7 @@ const WorkReadPage = () => {
   });
   const numericId = Number(id);
 
-  const api: string = "https://fornothingtsx.vercel.app/works";
+  const api: string = "http://localhost:8300/works";
   const navigate = useNavigate();
   async function getWorkById(id: number) {
     try {
