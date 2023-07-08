@@ -31,7 +31,7 @@ const WorkPage = ({ goToWork }: MainRoutesProps) => {
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const api: string = "https://fornothingtsx.vercel.app/works/api";
+  const api: string = "https://fornothingtsx.vercel.app/works";
   async function getWorks() {
     try {
       let res = (await axios.get<Work[]>(api)).data;
