@@ -97,6 +97,13 @@
       "title": "Warcraft",
       "advantages": "Strategy. Story. Charathers",
       "id": 14
+    },
+    {
+      "imgUrl": "https://avatars.mds.yandex.net/i?id=8856f6eb045a60bbe65b8f79847b5553f9f0b7a6-5358581-images-thumbs&n=13",
+      "description": "very good man",
+      "title": "Makers mentor",
+      "advantages": "Design. Cool.",
+      "id": 15
     }
   ]
 }
