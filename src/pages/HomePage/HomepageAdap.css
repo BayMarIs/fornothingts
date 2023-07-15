@@ -81,9 +81,6 @@
   .HomePage_clients__block {
     width: 45%;
   }
-  .HomePage_clients {
-    margin-left: 5%;
-  }
   .null {
     display: none;
   }
@@ -139,6 +136,9 @@
   .HomePage__info__p {
     width: 50%;
   }
+  .HomePage_clients {
+    margin-left: 5%;
+  }
 }
 @media all and (max-width: 768px) {
   .HomePage {
@@ -150,14 +150,14 @@
     font-size: 3rem;
   }
   #HomePage__works__forth__img {
-    height: 200px;
+    height: 300px;
   }
   #HomePage__works__third__img {
-    height: 200px;
+    height: 300px;
   }
 
   #HomePage__works__first__img {
-    height: 150px;
+    height: 250px;
   }
   .HomePage__choice__navigate__item {
     font-size: 4rem;
@@ -166,7 +166,7 @@
     font-size: 4rem;
   }
   .HomePage__works__first__img {
-    height: 200px;
+    height: 300px;
   }
   .HomePage__selectClients__p {
     font-size: 4rem;
@@ -190,7 +190,7 @@
     bottom: -20%;
   }
   #HomePage__works__second__img {
-    height: 150px;
+    height: 250px;
   }
   .HomePage__Work__numbers {
     font-size: 1.4rem;
