@@ -188,6 +188,13 @@
   }
   #HomePage__groupPicture__t {
     bottom: -20%;
+    height: 80px;
+  }
+  #HomePage__groupPicture__f {
+    height: 80px;
+  }
+  #HomePage__groupPicture__fo {
+    height: 70px;
   }
   #HomePage__works__second__img {
     height: 250px;
@@ -208,10 +215,10 @@
     font-size: 3rem;
   }
   #HomePage__groupPicture__fi {
-    height: 20vh;
+    height: 80px;
   }
   #HomePage__groupPicture__s {
-    height: 20vh;
+    height: 80px;
   }
   .HomePage__selectClients__numbers {
     font-size: 1.4rem;
