@@ -81,6 +81,9 @@
   .HomePage_clients__block {
     width: 45%;
   }
+  .HomePage_clients {
+    margin-left: 5%;
+  }
   .null {
     display: none;
   }
@@ -147,14 +150,14 @@
     font-size: 3rem;
   }
   #HomePage__works__forth__img {
-    height: 300px;
+    height: 200px;
   }
   #HomePage__works__third__img {
-    height: 300px;
+    height: 200px;
   }
 
   #HomePage__works__first__img {
-    height: 250px;
+    height: 150px;
   }
   .HomePage__choice__navigate__item {
     font-size: 4rem;
@@ -163,7 +166,7 @@
     font-size: 4rem;
   }
   .HomePage__works__first__img {
-    height: 300px;
+    height: 200px;
   }
   .HomePage__selectClients__p {
     font-size: 4rem;
@@ -187,7 +190,7 @@
     bottom: -20%;
   }
   #HomePage__works__second__img {
-    height: 250px;
+    height: 150px;
   }
   .HomePage__Work__numbers {
     font-size: 1.4rem;
