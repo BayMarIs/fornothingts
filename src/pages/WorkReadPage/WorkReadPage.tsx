@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./WorkReadPage.css";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+
 import iconDelete from "./icons8-delete.svg";
 import iconEdit from "./icons8-edit.svg";
 import iconOk from "./icons8-ok.svg";
 import iconNo from "./refresh-circle-svgrepo-com.svg";
+import { db } from "../../firebase";
+import {
+  collection,
+  getDocs,
+  updateDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 interface Work {
   imgUrl: string;
   advantages: string;
-  id: number;
+  id: string;
   title: string;
   description: string;
 }
 const WorkReadPage = () => {
   const [work, setWork] = useState<Work>();
-  const { id } = useParams();
+  const { id }: any = useParams();
   const [editWork, setEditWork] = useState<boolean>(false);
   const [editInp, setEditInp] = useState<{
     imgUrl: string;
@@ -28,22 +36,31 @@ const WorkReadPage = () => {
     title: "",
     description: "",
   });
-  const numericId = Number(id);
+  const worksTodoCollection = collection(db, "worksTodo");
 
-  const api: string = "http://localhost:8300/works";
   const navigate = useNavigate();
-  async function getWorkById(id: number) {
+  async function getWorkById(id: string) {
     try {
-      let res = (await axios.get<Work>(`${api}/${id}`)).data;
-      setWork(res);
-      getWorkById(numericId);
+      let des = await getDocs(worksTodoCollection);
+      let res: any = des.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .find((item) => item.id === id);
+
+      if (res) {
+        setWork(res);
+      } else {
+        setWork(undefined);
+      }
     } catch (error) {
       console.log(error);
     }
   }
-  async function changeWork(id: number, obj: object) {
+
+  async function changeWork(id: string, obj: object) {
     try {
-      await axios.patch(`${api}/${id}`, obj);
+      const workDoc = doc(db, "worksTodo", id);
+      await updateDoc(workDoc, obj);
+      getWorkById(id);
     } catch (error) {
       console.log(error);
     }
@@ -61,15 +78,17 @@ const WorkReadPage = () => {
         title: editInp.title,
         description: editInp.description,
       };
-      changeWork(numericId, obj);
+      changeWork(id, obj);
       setEditWork(!editWork);
     } else {
       alert("Заполните все поля!");
     }
   }
-  async function deleteWork(id: number) {
+  async function deleteWork(id: string) {
     try {
-      await axios.delete(`${api}/${id}`);
+      // await axios.delete(`${api}/${id}`);
+      const workDoc = doc(db, "worksTodo", id);
+      await deleteDoc(workDoc);
       getWorkById(id);
     } catch (error) {
       console.log(error);
@@ -77,7 +96,7 @@ const WorkReadPage = () => {
   }
   //
   useEffect(() => {
-    getWorkById(numericId);
+    getWorkById(id);
   }, []);
   return (
     <div className="WorkReadPage">
@@ -132,7 +151,7 @@ const WorkReadPage = () => {
                 alt=""
                 className="WorkReadPage__item__el"
                 onClick={() => {
-                  deleteWork(numericId);
+                  deleteWork(id);
                   navigate("/work");
                 }}
               />

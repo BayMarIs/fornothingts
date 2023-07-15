@@ -1,15 +1,16 @@
-import axios from "axios";
 import "./WorkPage.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { db } from "../../firebase";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 type MainRoutesProps = {
   goToWork: () => void;
 };
 interface Work {
   imgUrl: string;
   advantages: string;
-  id: number;
+  id: string;
   title: string;
   description: string;
 }
@@ -20,6 +21,7 @@ interface WorkFormData {
   advantages: string;
 }
 const WorkPage = ({ goToWork }: MainRoutesProps) => {
+  const worksTodoCollection = collection(db, "worksTodo");
   useEffect(() => {
     goToWork();
   }, []);
@@ -31,10 +33,10 @@ const WorkPage = ({ goToWork }: MainRoutesProps) => {
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const api: string = "http://localhost:8300/works";
   async function getWorks() {
     try {
-      let res = (await axios.get<Work[]>(api)).data;
+      let des = await getDocs(worksTodoCollection);
+      let res: any = des.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
       setWorks(res);
       setWorkLength(Math.round(res.length / 3));
       setCurrentIndex(Math.round(res.length / 3) * 2);
@@ -44,7 +46,7 @@ const WorkPage = ({ goToWork }: MainRoutesProps) => {
   }
   async function addWork(obj: object) {
     try {
-      await axios.post(api, obj);
+      await addDoc(worksTodoCollection, obj);
       getWorks();
     } catch (error) {
       console.log(error);
@@ -105,11 +107,11 @@ const WorkPage = ({ goToWork }: MainRoutesProps) => {
     }));
   };
   // verstk
-  const verstkWork = (item: Work) => {
+  const verstkWork = (item: Work, index: number) => {
     return (
       <div
         className="WorkPage__MainContainWorks__block__item"
-        key={item.id}
+        key={index}
         onClick={() => navigate(`/work/${item.id}`)}
       >
         <img
@@ -158,19 +160,21 @@ const WorkPage = ({ goToWork }: MainRoutesProps) => {
 
       <div className="WorkPage__MainContainWorks">
         <div className="WorkPage__MainContainWorks__block">
-          {works.slice(0, worksLength).map((item) => verstkWork(item))}
+          {works
+            .slice(0, worksLength)
+            .map((item, index) => verstkWork(item, index))}
         </div>
 
         <div className="WorkPage__MainContainWorks__block">
           {works
             .slice(currentIndex, works.length)
-            .map((item) => verstkWork(item))}
+            .map((item, index) => verstkWork(item, index))}
         </div>
         <div className="WorkPage__MainContainWorks__block">
           {" "}
           {works
             .slice(worksLength, currentIndex)
-            .map((item) => verstkWork(item))}
+            .map((item, index) => verstkWork(item, index))}
         </div>
       </div>
       {add ? (
